@@ -203,6 +203,22 @@ input[type="search"]::-webkit-search-cancel-button {
     transition: .25s ease;
 }
 
+.space-card-animation {
+    opacity: 0;
+    animation: space-card .25s ease forwards;
+}
+
+@keyframes space-card {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .space-card:hover {
     background-color: #1e3a8a;
     box-shadow: 0 0 10px #1e3a8a;
@@ -381,6 +397,8 @@ dialog[open] .prompt {
     width: fit-content;
     border-radius: 15px;
     background-color: #0f172a;
+    border: 1px solid rgb(80, 80, 80);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .prompt-input {

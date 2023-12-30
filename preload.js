@@ -1,4 +1,4 @@
-const { contextBridge, ipcRenderer } = require("electron")
+const { contextBridge, ipcRenderer } = require("electron");
 
 contextBridge.exposeInMainWorld("versions", {
     node: () => process.versions.node,
@@ -22,4 +22,4 @@ contextBridge.exposeInMainWorld("versions", {
     quit: () => ipcRenderer.invoke("quit"),
     minimize: () => ipcRenderer.invoke("minimize"),
     createSpaceFolder: () => ipcRenderer.invoke("createSpaceFolder"),
-})
+});
